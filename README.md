@@ -17,9 +17,17 @@ Templated boilerplate to perform active learning.
 - **Then**, switch to the created/modified environment by running   
 `conda activate <env-name>`
 
-
 ### **(Not preferred)** Using pip
-- Use the dependency files [from here](https://drive.google.com/drive/folders/1n3U8-h0YRr855r6C5r6fw_dkaMqvhZsC?usp=sharing) or from the zip-folder `GCA-Detection/`
-- Install all dependencies by running   
-`pip install -r dep-file-pip.txt`
+- Use `dep-file-pip.txt` file Install all dependencies by running,      
+  `pip install -r dep-file-pip.txt`
 
+## Download data
+- Use **toupee**'s setup to install the dataset.
+- For `tests/mnist_test`, get the MNIST dataset into `data/mnist` by running,   
+  `python bin/load_data.py mnist <destination-location>`
+- **Note**: The path to destination should preferrably be an **absolute path**, but it could also be **relative** to the current working context.
+
+
+## General Notes
+
+- Use `python3` in place of `python` to execute Python scripts if you experience problems with Python version resolution between 2.x and 3.x.
