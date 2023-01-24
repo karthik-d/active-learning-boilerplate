@@ -8,6 +8,8 @@ Templated boilerplate to perform active learning.
 - Use the following command to create a local copy by executing,   
 `git clone https://github.com/karthik-d/Boilerplate-for-Active-Learning`
 
+- Use the option `--recurse-submodules` to set up *toupee* as a submodule here itself. This can, however, be done at a later stage.
+
 ## Install dependencies
 
 ### **(Recommended)** Using an Anaconda environment
@@ -20,6 +22,15 @@ Templated boilerplate to perform active learning.
 ### **(Not preferred)** Using pip
 - Use `dep-file-pip.txt` file Install all dependencies by running,      
   `pip install -r dep-file-pip.txt`
+  
+### Setup `toupee` as a submodule
+- If you did not use `--recurse-submodules` while cloning the repository, set up *toupee* now.
+- Run the following commands to do so,
+  ```
+  git submodule init     
+  git submodule update   
+  ```
+  to detect the submodule, and to fetch and set it up, respectively.
 
 ## Download data
 - Use **toupee**'s setup to install the dataset.
