@@ -1,6 +1,6 @@
 # Boilerplate-for-Active-Learning
 
-Templated boilerplate to perform active learning.
+Templated boilerplate to perform Active Learning.
 
 
 ## Clone the repository to your local environment
