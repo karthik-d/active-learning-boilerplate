@@ -1,6 +1,6 @@
 ---
 ## MLP Parameters ##
-dataset: mnist/
+dataset: data/mnist
 data_format: npz
 convert_labels_to_one_hot: true
 model_file: test_mnist_cnn.model
