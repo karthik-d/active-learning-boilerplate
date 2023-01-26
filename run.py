@@ -16,9 +16,9 @@ from config import config
 
 def run_base_model():
     root_path = config.get('ROOT_PATH')
-    params_file = os.path.join(config.get('ROOT_PATH'), "tests", "mnist_test", "parameters.yaml")   # REQUIRED
+    params_file = os.path.join(config.get('ROOT_PATH'), "tests", "mnist_test", "parameters.yml")   # REQUIRED
     save_file = ""
-    num_epochs = "1"  # will be overriden by the setting in the parameter file (thanks to toupee!)
+    num_epochs = "1" 
     tensorboard = ""
     adv_testing = ""
     wandb_store = ""

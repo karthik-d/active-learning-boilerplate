@@ -2,7 +2,7 @@ import pytest
 import toupee as tp
 
 
-MNIST_PARAMS_FILE = 'tests/test_mnist.yaml'
+MNIST_PARAMS_FILE = 'tests/test_mnist.yml'
 
 
 METRICS_TO_CHECK = {'accuracy_score': 0.98,
