@@ -13,14 +13,16 @@ Templated boilerplate to perform active learning.
 ## Install dependencies
 
 ### **(Recommended)** Using an Anaconda environment
-- Use `dep-file-conda.yml` file to create an environment with all dependencies by running,   
-`conda env create -f dep-file-conda.yml`
+- [Quick Reference](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file)
+- Use `dependencies/dep-file-conda.yml` file to create an environment with all dependencies by running,   
+`conda env create -f dep-file-conda.yml`   
+The default environment name is **al_boilerplate**. Edit the .yml file to change it.
 
 - **Then**, switch to the created/modified environment by running   
 `conda activate <env-name>`
 
 ### **(Not preferred)** Using pip
-- Use `dep-file-pip.txt` file Install all dependencies by running,      
+- Use `dpendencies/dep-file-pip.txt` file Install all dependencies by running,      
   `pip install -r dep-file-pip.txt`
   
 ### **In either case** Install other dependencies currently not packaged in conda
