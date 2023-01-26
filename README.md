@@ -16,13 +16,13 @@ git clone https://github.com/karthik-d/Boilerplate-for-Active-Learning
 
 ### **(Recommended)** Using an Anaconda environment
 - [Quick Reference](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file)
-- **Either**, use `dependencies/dep-file-conda.yml` file to create an environment with all dependencies by running,   
+- **Either**, use [`dependencies/dep-file-conda.yml`](./dependencies/dep-file-conda.txt) file to create an environment with all dependencies by running,   
 ```
 conda env create -f dep-file-conda.yml
 ```   
 The default environment name is **al_boilerplate**. Edit the .yml file to change it.
 
-- **Or, for \*nix systems**, use `dependencies/dep-file-conda-nix.txt` file to create an environment by running,   
+- **Or, for \*nix systems**, use [`dependencies/dep-file-conda-nix.txt`](./dependencies/dep-file-conda-nix.txt) file to create an environment by running,   
 ```
 conda create --name <env-name> --file dep-file-conda-nix.txt
 ```  
@@ -33,7 +33,7 @@ conda activate <env-name>
 ```
 
 ### **(Not preferred)** Using pip
-- Use `dependencies/dep-file-pip.txt` file Install all dependencies by running,      
+- Use [`dependencies/dep-file-pip.txt`](./dependencies/dep-file-pip.txt) file to install all dependencies by running,      
   ```
   pip install -r dep-file-pip.txt
   ```
@@ -64,11 +64,11 @@ conda activate <env-name>
 - **Note**: The `load_data.py` script file, of course, must be traced to its location appropriately, depending on the current working context.
 
 ## Run Model Tests
-- Model test-cases are scripted in `tests/`
+- Model test-cases are scripted in [`tests/`](./tests)
   - Each subdirectory is a test-case.
   - Each test-case contains three files: A tensorflow model defined as a *yml* configuration (**.model** extension); a training experiment configuration file (**.yml** extension); and a Python script to define evaluation metrics and the testing workflow (**.py** extension). 
-- Use `run.py` in the root of the repository to run models; this is a wrapper for *toupee*'s model executors in `toupee/bin`.
-- Edit `run.py` to,
+- Use [`run.py`](./run.py) in the root of the repository to run models; this is a wrapper for *toupee*'s model executors in `toupee/bin`.
+- Edit [`run.py`](./run.py) to,
   - set the parameters for model training; only two parameters are **required**, and the rest are optional: `root_path` which is already configured to the repository root, and `params_file` which must point to the **.yml** defintion file in the test-case directory.
   - choose the underlying *toupee* script to run, by calling the appropriate `run_*` function in `__main__`. For instance, `run_base_model()` is a wrapper for *toupee*'s `bin/base_model.py`.
 - To execute the script, after setting the parameters and calling the appropriate driver function, simply use,
@@ -80,7 +80,7 @@ conda activate <env-name>
 
 - Use `python3` in place of `python` to execute Python scripts if you experience problems with Python version resolution between 2.x and 3.x.
 - Prefer the use of **abolute** paths over **relative** ones. In the latter case, adjust the path relative to the current context.
-- Preferably, use `ROOT_DIR` defined in `config.py` to reference the root of the codebase and construct the path from thereon.
+- Preferably, use `ROOT_DIR` defined in [`config.py`](./config.py) to reference the root of the codebase and construct the path from thereon.
 
 
 # Development Notes
