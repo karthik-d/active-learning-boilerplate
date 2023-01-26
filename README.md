@@ -23,6 +23,10 @@ Templated boilerplate to perform active learning.
 - Use `dep-file-pip.txt` file Install all dependencies by running,      
   `pip install -r dep-file-pip.txt`
   
+### **In either case** Install other dependencies currently not packaged in conda
+- Use the standard `pip install <lib-name>` syntax to install the following additional dependencies that are currently not available in any of the anaconda repositories,
+  - [pyyaml-include](https://pypi.org/project/pyyaml-include/)
+  
 ### Setup `toupee` as a submodule
 - If you did not use `--recurse-submodules` while cloning the repository, set up *toupee* now.
 - Run the following commands to do so,
