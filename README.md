@@ -14,9 +14,12 @@ Templated boilerplate to perform active learning.
 
 ### **(Recommended)** Using an Anaconda environment
 - [Quick Reference](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file)
-- Use `dependencies/dep-file-conda.yml` file to create an environment with all dependencies by running,   
+- **Either**, use `dependencies/dep-file-conda.yml` file to create an environment with all dependencies by running,   
 `conda env create -f dep-file-conda.yml`   
 The default environment name is **al_boilerplate**. Edit the .yml file to change it.
+
+- **Or, for \*nix systems**, use `dependencies/dep-file-conda-nix.txt` file to create an environment by running,   
+`conda create --name <env-name> --file dep-file-conda-nix.txt`  
 
 - **Then**, switch to the created/modified environment by running   
 `conda activate <env-name>`
@@ -24,8 +27,12 @@ The default environment name is **al_boilerplate**. Edit the .yml file to change
 ### **(Not preferred)** Using pip
 - Use `dpendencies/dep-file-pip.txt` file Install all dependencies by running,      
   `pip install -r dep-file-pip.txt`
+
+#### Potential caveats
+- The requirements file for `pip` was generated on a *nix system. Hence, it will install without hiccups only on this platform.
+- For other platoforms, the task may simply decompose to a manual dep-by-dep install! In this case, refer to the versions of dependencies in the dependency files when installing them.
   
-### **In either case** Install other dependencies currently not packaged in conda
+### **In either case**, Install other dependencies currently not packaged in conda
 - Use the standard `pip install <lib-name>` syntax to install the following additional dependencies that are currently not available in any of the anaconda repositories,
   - [pyyaml-include](https://pypi.org/project/pyyaml-include/)
   
