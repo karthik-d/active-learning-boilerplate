@@ -14,6 +14,7 @@ from config import config
 ## base_model.py configurations (SET HERE; "" to OMIT)
 
 def run_base_model():
+    root_path = config.get('ROOT_PATH'),
     params_file = os.path.join(config.get('ROOT_PATH'), "tests", "mnist_test", "parameters.yaml")   # REQUIRED
     save_file = ""
     num_epochs = "1"  # will be overriden by the setting in the parameter file (thanks to toupee!)
@@ -43,7 +44,7 @@ def run_base_model():
     print("[INFO] Parameter file: ", params_file)
     os.system(
         'python toupee/bin/base_model.py {root_path} {params} {save} {epochs} {tboard} {adv_testing} {wandb_store} {wandb_project} {wandb_group}'.format(
-            root_path = config.get('ROOT_PATH'),
+            root_path = root_path,
             params = params_file,
             save = save_file,
             epochs = num_epochs,
