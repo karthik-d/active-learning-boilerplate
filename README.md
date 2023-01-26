@@ -39,8 +39,10 @@ Templated boilerplate to perform active learning.
 ## Download data
 - Use **toupee**'s setup to install the dataset.
 - For `tests/mnist_test`, get the MNIST dataset into `data/mnist` by running,   
-  `python bin/load_data.py mnist <destination-location>`
+  `python toupee/bin/load_data.py mnist <destination-location>`
+- This prepares the data in the [**NPZ**](https://imageio.readthedocs.io/en/v2.6.1/format_npz.html) format, into the destination directory.
 - **Note**: The path to destination should preferrably be an **absolute path**, but it could also be **relative** to the current working context.
+- **Note**: The `load_data.py` script file, of course, must be traced to its location appropriately, depending on the current working context.
 
 
 ## General Notes
