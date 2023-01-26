@@ -1,9 +1,10 @@
 ---
 ## MLP Parameters ##
+# Set absolute paths, or relative to the root of this codebase (ROOT_DIR in config).
 dataset: data/mnist
 data_format: npz
 convert_labels_to_one_hot: true
-model_file: test_mnist_cnn.model
+model_file: cnn.model
 reduce_lr_on_plateau:
   factor: 0.1
   patience: 5
@@ -16,7 +17,7 @@ optimizer:
       learning_rate:
         0:  0.001
         1: 0.0001
-epochs: 5
+epochs: 1
 batch_size: 256
 loss: categorical_crossentropy
 shuffle: true

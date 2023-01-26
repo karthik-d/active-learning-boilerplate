@@ -8,12 +8,13 @@ import os
 from config import config
 
 # TODO: Switch to CLI args.
+# TODO: Move CLI handling from base_model to here.
 # TODO: Use level-logging.
 
 ## base_model.py configurations (SET HERE; "" to OMIT)
 params_file = os.path.join(config.get('ROOT_PATH'), "tests", "mnist_test", "parameters.yaml")   # REQUIRED
 save_file = ""
-num_epochs = ""
+num_epochs = "1"  # will be overriden by the setting in the parameter file (thanks to toupee!)
 tensorboard = ""
 adv_testing = ""
 wandb_store = ""
@@ -39,7 +40,8 @@ parser.add_argument('--wandb-group', type=str, help="Weights and Biases group na
 
 print("[INFO] Parameter file: ", params_file)
 os.system(
-    'python toupee/bin/base_model.py {params} {save} {epochs} {tboard} {adv_testing} {wandb_store} {wandb_project} {wandb_group}'.format(
+    'python toupee/bin/base_model.py {root_path} {params} {save} {epochs} {tboard} {adv_testing} {wandb_store} {wandb_project} {wandb_group}'.format(
+        root_path = config.get('ROOT_PATH'),
         params = params_file,
         save = save_file,
         epochs = num_epochs,
