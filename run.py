@@ -1,1 +1,1 @@
-from tests import *
+from tests import mnist_test.driver
