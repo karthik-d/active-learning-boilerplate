@@ -12,43 +12,49 @@ from config import config
 # TODO: Use level-logging.
 
 ## base_model.py configurations (SET HERE; "" to OMIT)
-params_file = os.path.join(config.get('ROOT_PATH'), "tests", "mnist_test", "parameters.yaml")   # REQUIRED
-save_file = ""
-num_epochs = "1"  # will be overriden by the setting in the parameter file (thanks to toupee!)
-tensorboard = ""
-adv_testing = ""
-wandb_store = ""
-wandb_project = ""
-wandb_group = ""
 
-# help text for arguments (reproduced, in part, from toupee)
-'''
-parser.add_argument('params_file', help='the parameters file')
-parser.add_argument('save_file', nargs='?',
-                    help='the file where the trained MLP is to be saved')
-parser.add_argument('--epochs', type=int, nargs='?',
-                    help='number of epochs to run')
-parser.add_argument('--tensorboard', action="store_true",
-                    help="Save training graphs to TensorBoard")
-parser.add_argument('--adversarial-testing', action="store_true",
-                    help="Test for adversarial robustness")
-parser.add_argument('--wandb', action="store_true",
-                    help="Send results to Weights and Biases")
-parser.add_argument('--wandb-project', type=str, help="Weights and Biases project name")
-parser.add_argument('--wandb-group', type=str, help="Weights and Biases group name")
-'''
+def run_base_model():
+    params_file = os.path.join(config.get('ROOT_PATH'), "tests", "mnist_test", "parameters.yaml")   # REQUIRED
+    save_file = ""
+    num_epochs = "1"  # will be overriden by the setting in the parameter file (thanks to toupee!)
+    tensorboard = ""
+    adv_testing = ""
+    wandb_store = ""
+    wandb_project = ""
+    wandb_group = ""
 
-print("[INFO] Parameter file: ", params_file)
-os.system(
-    'python toupee/bin/base_model.py {root_path} {params} {save} {epochs} {tboard} {adv_testing} {wandb_store} {wandb_project} {wandb_group}'.format(
-        root_path = config.get('ROOT_PATH'),
-        params = params_file,
-        save = save_file,
-        epochs = num_epochs,
-        tboard = tensorboard,
-        adv_testing = adv_testing,
-        wandb_store = wandb_store,
-        wandb_project = wandb_project,
-        wandb_group = wandb_group
+    # help text for arguments (reproduced, in part, from toupee)
+    '''
+    parser.add_argument('params_file', help='the parameters file')
+    parser.add_argument('save_file', nargs='?',
+                        help='the file where the trained MLP is to be saved')
+    parser.add_argument('--epochs', type=int, nargs='?',
+                        help='number of epochs to run')
+    parser.add_argument('--tensorboard', action="store_true",
+                        help="Save training graphs to TensorBoard")
+    parser.add_argument('--adversarial-testing', action="store_true",
+                        help="Test for adversarial robustness")
+    parser.add_argument('--wandb', action="store_true",
+                        help="Send results to Weights and Biases")
+    parser.add_argument('--wandb-project', type=str, help="Weights and Biases project name")
+    parser.add_argument('--wandb-group', type=str, help="Weights and Biases group name")
+    '''
+
+    print("[INFO] Parameter file: ", params_file)
+    os.system(
+        'python toupee/bin/base_model.py {root_path} {params} {save} {epochs} {tboard} {adv_testing} {wandb_store} {wandb_project} {wandb_group}'.format(
+            root_path = config.get('ROOT_PATH'),
+            params = params_file,
+            save = save_file,
+            epochs = num_epochs,
+            tboard = tensorboard,
+            adv_testing = adv_testing,
+            wandb_store = wandb_store,
+            wandb_project = wandb_project,
+            wandb_group = wandb_group
+        )
     )
-)
+
+
+if __name__=='__main__':
+    run_base_model()
