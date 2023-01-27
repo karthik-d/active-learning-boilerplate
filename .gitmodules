@@ -1,0 +1,3 @@
+[submodule "toupee"]
+	path = toupee
+	url = https://github.com/nitbix/toupee
