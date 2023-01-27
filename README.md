@@ -10,7 +10,7 @@ Templated boilerplate to perform Active Learning.
 git clone https://github.com/karthik-d/Boilerplate-for-Active-Learning
 ```
 
-- Use the option `--recurse-submodules` to set up *toupee* as a submodule here itself. This can, however, be done at a later stage.
+- Use the option `--recurse-submodules` to set up the *toupee* fork as a submodule here itself. This can, however, be done at a later stage.
 
 ## Install dependencies
 
@@ -47,7 +47,7 @@ conda activate <env-name>
   - [pyyaml-include](https://pypi.org/project/pyyaml-include/)
   
 ### Setup `toupee` as a submodule
-- If you did not use `--recurse-submodules` while cloning the repository, set up *toupee* now.
+- If you did not use `--recurse-submodules` while cloning the repository, set up the *toupee* fork now.
 - Run the following commands to do so,
   ```
   git submodule init     
@@ -81,6 +81,7 @@ conda activate <env-name>
 - Use `python3` in place of `python` to execute Python scripts if you experience problems with Python version resolution between 2.x and 3.x.
 - Prefer the use of **abolute** paths over **relative** ones. In the latter case, adjust the path relative to the current context.
 - Preferably, use `ROOT_DIR` defined in [`config.py`](./config.py) to reference the root of the codebase and construct the path from thereon.
+- If you need to make changes to the *toupee* fork, make sure to do them on the `dev-main` branch, and send a pull request to its `master` to verify. Note, however, that the changes made on `dev-main` will be immediately mapped to the boilerplate, and you can start using it right away.
 
 
 # Development Notes
@@ -89,4 +90,4 @@ conda activate <env-name>
 - Model definitions changed, in-pipeline, from YAML to JSON to adapt to newer versions of *tensorflow* and *keras*. No input/output changes.
 - Environment dependencies and version-related issues fixed. Environment sandboxes included as dependency files for easy reproduction.
 - File paths configured to be referenced from codebase root.
-- Wrapper developed for training experiments to integrate toupee as a "submodule" of the working codebase.
+- Wrapper developed for training experiments to integrate a fork of toupee as a **submodule** of the working codebase.
