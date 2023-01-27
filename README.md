@@ -42,9 +42,10 @@ conda activate <env-name>
 - The requirements file for `pip` was generated on a *nix system. Hence, it will install without hiccups only on this platform.
 - For other platforms, the task may simply decompose to a manual dep-by-dep install! In this case, refer to the versions of dependencies in the dependency files when installing them.
   
-### **In either case**, Install other dependencies currently not packaged in conda
+### **In either case**, install other dependencies currently not packaged in conda
 - Use the standard `pip install <lib-name>` syntax to install the following additional dependencies that are currently not available in any of the anaconda repositories,
   - [pyyaml-include](https://pypi.org/project/pyyaml-include/)
+- **NOTE**: Newer versions of conda may have already completed this for you.
   
 ### Setup `toupee` as a submodule
 - If you did not use `--recurse-submodules` while cloning the repository, set up the *toupee* fork now.
