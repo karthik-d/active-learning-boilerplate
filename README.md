@@ -57,7 +57,7 @@ conda activate <env-name>
 
 ## Download data
 - Use **toupee**'s setup to install the dataset.
-- For `tests/mnist_test`, get the MNIST dataset into `data/mnist` by running,   
+- For [`tests/mnist_test`](./tests/mnist_test), get the MNIST dataset into `data/mnist` by running,   
   `python toupee/bin/load_data.py mnist <destination-location>`
 - This prepares the data in the [**NPZ**](https://imageio.readthedocs.io/en/v2.6.1/format_npz.html) format, into the destination directory.
 - **Note**: The path to destination should preferrably be an **absolute path**, but it could also be **relative** to the current working context.
@@ -91,7 +91,7 @@ Should the driver run without any errors, the following outputs can be expected 
 - Use `python3` in place of `python` to execute Python scripts if you experience problems with Python version resolution between 2.x and 3.x.
 - Prefer the use of **abolute** paths over **relative** ones. In the latter case, adjust the path relative to the current context.
 - Preferably, use `ROOT_DIR` defined in [`config.py`](./config.py) to reference the root of the codebase and construct the path from thereon.
-- If you need to make changes to the *toupee* fork, make sure to do them on the `dev-main` branch, and send a pull request to its `master` to verify. Note, however, that the changes made on `dev-main` will be immediately mapped to the boilerplate, and you can start using it right away.
+- If you need to make changes to the *toupee* fork, make sure to do them on the [`dev-main`](https://github.com/karthik-d/toupee-refbase/tree/dev-main) branch, and send a pull request to its [`master`](https://github.com/karthik-d/toupee-refbase/tree/master) to verify. Note, however, that the changes made on [`dev-main`](https://github.com/karthik-d/toupee-refbase/tree/dev-main) will be immediately mapped to the boilerplate, and you can start using it right away.
 
 
 # Development Notes
