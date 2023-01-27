@@ -75,6 +75,16 @@ conda activate <env-name>
   ```
   python run.py
   ```
+  
+### Expected Outputs
+
+Should the driver run without any errors, the following outputs can be expected for training a CNN on the MNIST dataset for 1 epoch and subsequently, evaluating it.
+
+<img src="./docs/outputs_mnist-test/op-1.png" width="800">
+
+<img src="./docs/outputs_mnist-test/op-2.png" width="800">
+
+<img src="./docs/outputs_mnist-test/op-3.png" width="800">
 
 ## General Notes
 
