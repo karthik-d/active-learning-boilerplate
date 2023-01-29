@@ -5,7 +5,7 @@ Templated boilerplate to perform Active Learning. Uses a fork of [toupee](https:
 
 ## Clone the repository to your local environment
 
-- Use the following command to create a local copy by executing,   
+- Use the following command to create a local copy,   
 ```
 git clone https://github.com/karthik-d/Boilerplate-for-Active-Learning
 ```
@@ -47,8 +47,8 @@ conda activate <env-name>
   - [pyyaml-include](https://pypi.org/project/pyyaml-include/)
 - **Note**: Newer versions of *conda* may have already completed this for you.
   
-### Setup `toupee` as a submodule
-- If you did not use `--recurse-submodules` while cloning the repository, set up the [*toupee* fork](https://github.com/karthik-d/toupee-refbase) now.
+### Setup [**toupee**](https://github.com/nitbix/toupee) as a submodule
+- If you did not use `--recurse-submodules` when cloning this repository, set up the [*toupee* fork](https://github.com/karthik-d/toupee-refbase) now.
 - Run the following commands to do so,
   ```
   git submodule init     
@@ -57,17 +57,18 @@ conda activate <env-name>
   to detect the submodule, and to fetch and set it up, respectively.
 
 ## Download data
-- Use **toupee**'s setup to install the dataset.
+- Use [**toupee**](https://github.com/nitbix/toupee)'s setup to install the dataset.
 - For [`tests/mnist_test`](./tests/mnist_test), get the MNIST dataset into `data/mnist` by running,   
   `python toupee/bin/load_data.py mnist <destination-location>`
 - This prepares the data in the [**NPZ**](https://imageio.readthedocs.io/en/v2.6.1/format_npz.html) format, into the destination directory.
-- **Note**: The path to destination should preferrably be an **absolute path**, but it could also be **relative** to the current working context.
-- **Note**: The `load_data.py` script file, of course, must be traced to its location appropriately, depending on the current working context.
+- **Please note that**,
+  - The path to destination should preferrably be an **absolute path**, but it could also be **relative** to the current working context.
+  - The `bin/load_data.py` script file, of course, must be traced to its location appropriately, depending on the current working context.
 
 ## Run Model Tests
 - Model test-cases are scripted in [`tests/`](./tests)
   - Each subdirectory is a test-case.
-  - Each test-case contains three files: A tensorflow model defined as a *yml* configuration (**.model** extension); a training experiment configuration file (**.yml** extension); and a Python script to define evaluation metrics and the testing workflow (**.py** extension). 
+  - Each test-case contains three files: a tensorflow model defined as a *yml* configuration (with **.model** extension); a training experiment configuration file (with **.yml** extension); and a Python script to define evaluation metrics and the testing workflow (with **.py** extension). 
 - Use [`run.py`](./run.py) in the root of the repository to run models; this is a wrapper for *toupee*'s model executors in `toupee/bin`.
 - Edit [`run.py`](./run.py) to,
   - set the parameters for model training; only two parameters are **required**, and the rest are optional: `root_path` which is already configured to the repository root, and `params_file` which must point to the **.yml** defintion file in the test-case directory.
@@ -79,7 +80,7 @@ conda activate <env-name>
   
 ### Expected Outputs
 
-Should the driver run without any errors, the following output can be expected for training a CNN on the MNIST dataset for 1 epoch and subsequently evaluating it.
+Should the driver run without any errors, the following output can be expected for training a CNN on the MNIST dataset for 1 epoch, and subsequently evaluating it.
 
 <img src="./docs/outputs_mnist-test/op-1.png" width="800">
 
