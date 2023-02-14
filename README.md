@@ -1,6 +1,6 @@
 # Boilerplate-for-Active-Learning
 
-Templated boilerplate to perform Active Learning. Uses a fork of [toupee](https://github.com/nitbix/toupee) as a submodule, with custom modifications to adapt to newer versions of dependencies and this specific boilerplate implementation.
+Templated boilerplate to perform Active Learning. Uses a fork of [toupee](https://github.com/nitbix/toupee) as a submodule with custom modifications for this particular boilerplate implementation. Fixes compatability issues with `tensorflow >= 2.2`.
 
 
 ## Clone the repository to your local environment
