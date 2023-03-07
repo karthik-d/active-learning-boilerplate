@@ -95,7 +95,7 @@ def run_ensemble_model():
     '''
 
     print("[INFO] Parameter file: ", params_file)
-    _cmd = 'python toupee/bin/base_model.py {root_path} {params} {save} {epochs} {size} {tboard} {adv_testing} {wandb_store} {wandb_project} {wandb_group} {distil}'.format(
+    _cmd = 'python toupee/bin/ensemble.py {root_path} {params} {save} {epochs} {size} {tboard} {adv_testing} {wandb_store} {wandb_project} {wandb_group} {distil}'.format(
         root_path = root_path,
         params = params_file,
         save = save_file,
@@ -113,4 +113,5 @@ def run_ensemble_model():
 
 
 if __name__=='__main__':
-    run_base_model()
+    # run_base_model()
+    run_ensemble_model()
