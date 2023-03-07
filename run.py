@@ -13,6 +13,7 @@ from config import config
 # TODO: Parameter supply needs major fixing for non-required fields
 
 ## base_model.py configurations (SET HERE; "" to OMIT)
+## ensemble.py   configurations (SET HERE; "" to OMIT)
 
 def run_base_model():
     root_path = config.get('ROOT_PATH')
@@ -61,7 +62,7 @@ def run_base_model():
 
 def run_ensemble_model():
     root_path = config.get('ROOT_PATH')
-    params_file = os.path.join(config.get('ROOT_PATH'), "tests", "mnist_test", "parameters.yml")   # REQUIRED
+    params_file = os.path.join(config.get('ROOT_PATH'), "tests", "cifar10_dib_test", "parameters.yml")   # REQUIRED
     save_file = ""
     num_epochs = "1" 
     ensemble_size = ""
@@ -113,5 +114,5 @@ def run_ensemble_model():
 
 
 if __name__=='__main__':
-    # run_base_model()
-    run_ensemble_model()
+    run_base_model()
+    # run_ensemble_model()
