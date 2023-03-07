@@ -72,7 +72,9 @@ conda activate <env-name>
 - Use [`run.py`](./run.py) in the root of the repository to run models; this is a wrapper for *toupee*'s model executors in `toupee/bin`.
 - Edit [`run.py`](./run.py) to,
   - set the parameters for model training; only two parameters are **required**, and the rest are optional: `root_path` which is already configured to the repository root, and `params_file` which must point to the **.yml** defintion file in the test-case directory.
-  - choose the underlying *toupee* script to run, by calling the appropriate `run_*` function in `__main__`. For instance, `run_base_model()` is a wrapper for *toupee*'s `bin/base_model.py`.
+  - choose the underlying *toupee* script to run, by calling the appropriate `run_*` function in `__main__`. 
+    - `run_base_model()` is a wrapper for *toupee*'s `bin/base_model.py`.
+    - `run_ensemble_model()` is a wrapper for *toupee*'s `bin/ensemble.py`.
 - To execute the script, after setting the parameters and calling the appropriate driver function, simply use,
   ```
   python run.py
@@ -80,13 +82,10 @@ conda activate <env-name>
   
 ### Expected Outputs
 
-Should the driver run without any errors, the following output can be expected for training a CNN on the MNIST dataset for 1 epoch, and subsequently evaluating it.
+Should the driver run without any errors, the following outputs can be expected for training and subsequently evaluating the test workflows.
 
-<img src="./docs/outputs_mnist-test/op-1.png" width="800">
-
-<img src="./docs/outputs_mnist-test/op-2.png" width="800">
-
-<img src="./docs/outputs_mnist-test/op-3.png" width="800">
+- [Link to sample outpusts for `mnist_test`](./docs/outputs_mnist-test)
+- [Link to sample outputs for `cifar10_dib_test`](./docs/outputs_cifar10_dib_test)
 
 ## General Notes
 
