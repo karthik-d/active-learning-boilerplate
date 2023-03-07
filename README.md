@@ -1,10 +1,10 @@
-# Boilerplate for Active Learning
+# Boilerplate for Active Ensemble Learning
 
-Templated boilerplate to perform Active Learning. Uses a fork of [toupee](https://github.com/nitbix/toupee) as a submodule with custom modifications for this particular boilerplate implementation. Fixes compatability issues with `tensorflow >= 2.2`.
+Templated boilerplate to perform Active Learning. Uses a fork of [toupee](https://github.com/nitbix/toupee) as a submodule with custom modifications for this sandboxed implementation. Fixes compatability issues with `tensorflow >= 2.2`.
 
 - Readily extensible for,
   - Aggregated training of single models.
-  - Deep Incremental Boosting (DIB) with custom addition layers.
+  - [Deep Incremental Boosting (DIB)](https://arxiv.org/abs/1708.03704) with customizable addition layers for boosting.
 - Templates can be further extended for other ensembling techniques.
 
 ## Clone the repository to your local environment
@@ -89,7 +89,7 @@ conda activate <env-name>
 Should the driver run without any errors, the following outputs can be expected for training and subsequently evaluating the test workflows.
 
 - [Link to sample outputs for `mnist_test`](./docs/outputs_mnist-test)
-- [Link to sample outputs for `cifar10_dib_test`](./docs/outputs_cifar10_dib_test)
+- [Link to sample outputs for `cifar10_dib_test`](./docs/outputs_cifar10-dib-test)
 
 ## General Notes
 
